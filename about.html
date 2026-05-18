@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-HK" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司簡介 - FH TRADING LIMITED</title>
+    <meta name="description" content="FH TRADING LIMITED - 20年國際OEM/ODM代加工經驗，高級女性禮服生產與批發">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Noto Serif SC', serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#f5f5f5',
+                        accent: '#d4af37',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-xl lg:text-2xl font-serif font-bold text-primary dark:text-white">FH TRADING</span>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors font-medium">首頁</a>
+                    <a href="products.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors font-medium">產品中心</a>
+                    <a href="about.html" class="text-primary dark:text-white font-medium">公司簡介</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors font-medium">合作咨詢</a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="lang-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <span class="text-sm font-medium">EN</span>
+                    </button>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium">首頁</a>
+                <a href="products.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium">產品中心</a>
+                <a href="about.html" class="block py-2 text-primary dark:text-white font-medium">公司簡介</a>
+                <a href="contact.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium">合作咨詢</a>
+                <div class="flex items-center space-x-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+                    <button id="mobile-lang-toggle" class="text-sm font-medium text-gray-600 dark:text-gray-400">EN</button>
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-16 lg:pt-20 pb-8 bg-secondary dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl lg:text-4xl font-serif font-bold">公司簡介</h1>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">瞭解FH TRADING LIMITED的發展歷程與核心優勢</p>
+        </div>
+    </header>
+
+    <!-- Company Introduction -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-2xl lg:text-3xl font-serif font-bold mb-6">關於 FH TRADING LIMITED</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        FH TRADING LIMITED 成立於2004年，專注高級女性禮服生產與批發業務已有20年歷史。公司總部位於香港，擁有自有工廠和專業的研發團隊，為全球客戶提供高品質的禮服產品。
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        我們累積了豐富的國際OEM/ODM代加工經驗，與眾多知名品牌建立了長期穩定的合作關係。無論是現貨批發、跨境供應、一件代發還是加工定制，我們都能提供專業的解決方案。
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        公司擁有完善的質量管理體系和相關權威認證，確保每一件產品都符合國際標準。我們秉承"品質至上、客戶第一"的理念，致力於為客戶創造價值。
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="images/10005.jpg" alt="公司展示" class="w-full h-80 object-cover rounded-lg">
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 border-4 border-accent rounded-lg -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Advantages -->
+    <section class="py-16 bg-secondary dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl lg:text-3xl font-serif font-bold mb-12 text-center">核心優勢</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-award text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">20年行業經驗</h3>
+                    <p class="text-gray-600 dark:text-gray-400">深耕禮服生產領域20年，積累豐富的國際OEM/ODM代加工經驗，品質有保障。</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-factory text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">自有工廠與研發團隊</h3>
+                    <p class="text-gray-600 dark:text-gray-400">擁有自有生產基地和專業研發團隊，支持從設計到生產的全流程服務。</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-truck text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">靈活供應鏈</h3>
+                    <p class="text-gray-600 dark:text-gray-400">柔性生產鏈，小批量試單到大貨批量靈活適配，現貨48小時發貨。</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">跨境供應能力</h3>
+                    <p class="text-gray-600 dark:text-gray-400">支持跨境供應、一件代發，可授權多平台銷售，全球配送。</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-certificate text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">權威認證</h3>
+                    <p class="text-gray-600 dark:text-gray-400">擁有相關權威認證，產品品質符合國際標準，值得信賴。</p>
+                </div>
+                <div class="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">專業服務團隊</h3>
+                    <p class="text-gray-600 dark:text-gray-400">擁有經驗豐富的客戶服務團隊，提供7x24小時技術支持。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-secondary dark:bg-gray-800 rounded-lg">
+                    <i class="fas fa-phone text-accent text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">聯絡電話</h3>
+                    <p class="text-gray-600 dark:text-gray-400">+852 9489 9268</p>
+                </div>
+                <div class="text-center p-8 bg-secondary dark:bg-gray-800 rounded-lg">
+                    <i class="fas fa-envelope text-accent text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">電子郵件</h3>
+                    <p class="text-gray-600 dark:text-gray-400">ScottSnyder2528@outlook.com</p>
+                </div>
+                <div class="text-center p-8 bg-secondary dark:bg-gray-800 rounded-lg">
+                    <i class="fas fa-map-marker-alt text-accent text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">公司地址</h3>
+                    <p class="text-gray-600 dark:text-gray-400">香港</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl lg:text-3xl font-serif font-bold text-white mb-4">與我們合作</h2>
+            <p class="text-gray-300 mb-8">無論您是尋找現貨批發、跨境供應還是定制加工，我們都能為您提供專業服務</p>
+            <a href="contact.html" class="inline-flex items-center px-8 py-3 bg-accent text-white font-semibold rounded hover:bg-opacity-90 transition-all">
+                立即咨詢 <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">FH TRADING LIMITED</h3>
+                    <p class="text-gray-400 text-sm">高級女性禮服生產與批發</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">快速鏈接</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">產品中心</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">公司簡介</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">合作咨詢</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">聯繫方式</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i> +852 9489 9268</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> ScottSnyder2528@outlook.com</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 香港</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">合作咨詢</h4>
+                    <p class="text-gray-400 text-sm mb-4">歡迎隨時與我們聯繫，我們將為您提供專業的服務</p>
+                    <a href="contact.html" class="inline-block px-4 py-2 border border-white/30 rounded hover:bg-white/10 transition-colors text-sm">立即咨詢</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500 text-sm">FH TRADING LIMITED 版權所有 | <a href="#" class="hover:text-white">隱私政策</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        
+        const toggleTheme = () => {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        };
+        
+        themeToggle?.addEventListener('click', toggleTheme);
+        mobileThemeToggle?.addEventListener('click', toggleTheme);
+        
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (savedTheme === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Language Toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const mobileLangToggle = document.getElementById('mobile-lang-toggle');
+        
+        const switchToEnglish = () => {
+            window.location.href = 'about-en.html';
+        };
+        
+        langToggle?.addEventListener('click', switchToEnglish);
+        mobileLangToggle?.addEventListener('click', switchToEnglish);
+    </script>
+</body>
+</html>

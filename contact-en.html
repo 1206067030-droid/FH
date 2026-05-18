@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FH TRADING LIMITED</title>
+    <meta name="description" content="FH TRADING LIMITED - Contact Form for Business Inquiry">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#f5f5f5',
+                        accent: '#d4af37',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <a href="index-en.html" class="flex items-center space-x-2">
+                    <span class="text-xl lg:text-2xl font-serif font-bold text-primary dark:text-white">FH TRADING</span>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index-en.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors font-medium">Home</a>
+                    <a href="products-en.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors font-medium">Products</a>
+                    <a href="about-en.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors font-medium">About Us</a>
+                    <a href="contact-en.html" class="text-primary dark:text-white font-medium">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="lang-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <span class="text-sm font-medium">中文</span>
+                    </button>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index-en.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium">Home</a>
+                <a href="products-en.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium">Products</a>
+                <a href="about-en.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-medium">About Us</a>
+                <a href="contact-en.html" class="block py-2 text-primary dark:text-white font-medium">Contact</a>
+                <div class="flex items-center space-x-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+                    <button id="mobile-lang-toggle" class="text-sm font-medium text-gray-600 dark:text-gray-400">中文</button>
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-16 lg:pt-20 pb-8 bg-secondary dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl lg:text-4xl font-serif font-bold">Contact Us</h1>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Fill out the form below and we'll contact you within 24 hours</p>
+        </div>
+    </header>
+
+    <!-- Contact Form -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-2xl font-serif font-bold mb-6">Contact Form</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-2">Phone <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                                <option value="">Select Inquiry Type</option>
+                                <option value="wholesale">Wholesale</option>
+                                <option value="crossborder">Cross-border Supply</option>
+                                <option value="dropship">Dropshipping</option>
+                                <option value="custom">Custom Manufacturing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message <span class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-accent text-white font-semibold rounded hover:bg-opacity-90 transition-all">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                    <div id="success-message" class="hidden mt-6 p-4 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg">
+                        Thank you for your inquiry! We will contact you within 24 hours.
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <h2 class="text-2xl font-serif font-bold">Contact Information</h2>
+                    
+                    <div class="bg-secondary dark:bg-gray-800 rounded-lg p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Phone</h3>
+                                <p class="text-gray-600 dark:text-gray-400">+852 9489 9268</p>
+                                <p class="text-gray-500 dark:text-gray-500 text-sm mt-1">Mon-Fri 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-secondary dark:bg-gray-800 rounded-lg p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Email</h3>
+                                <p class="text-gray-600 dark:text-gray-400">ScottSnyder2528@outlook.com</p>
+                                <p class="text-gray-500 dark:text-gray-500 text-sm mt-1">Response within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-secondary dark:bg-gray-800 rounded-lg p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Address</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Hong Kong</p>
+                                <p class="text-gray-500 dark:text-gray-500 text-sm mt-1">Visit by appointment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-secondary dark:bg-gray-800 rounded-lg p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Contact Person</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Mr. Liu</p>
+                                <p class="text-gray-500 dark:text-gray-500 text-sm mt-1">Business Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">FH TRADING LIMITED</h3>
+                    <p class="text-gray-400 text-sm">Premium Women's Evening Dress Manufacturer</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index-en.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products-en.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="about-en.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact-en.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i> +852 9489 9268</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> ScottSnyder2528@outlook.com</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Hong Kong</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Business Inquiry</h4>
+                    <p class="text-gray-400 text-sm mb-4">Feel free to contact us anytime for professional service</p>
+                    <a href="contact-en.html" class="inline-block px-4 py-2 border border-white/30 rounded hover:bg-white/10 transition-colors text-sm">Contact Now</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500 text-sm">FH TRADING LIMITED All Rights Reserved | <a href="#" class="hover:text-white">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        
+        const toggleTheme = () => {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        };
+        
+        themeToggle?.addEventListener('click', toggleTheme);
+        mobileThemeToggle?.addEventListener('click', toggleTheme);
+        
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (savedTheme === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        
+        contactForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactForm.reset();
+            successMessage.classList.remove('hidden');
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Language Toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const mobileLangToggle = document.getElementById('mobile-lang-toggle');
+        
+        const switchToChinese = () => {
+            window.location.href = 'contact.html';
+        };
+        
+        langToggle?.addEventListener('click', switchToChinese);
+        mobileLangToggle?.addEventListener('click', switchToChinese);
+    </script>
+</body>
+</html>
